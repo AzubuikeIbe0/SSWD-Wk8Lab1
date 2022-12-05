@@ -80,7 +80,7 @@ const { product } = data;
 			}}
 			>
 			 <div class="row mb-3">
-				<!-- <label for="product_id" class="form-label">Product Id:</label>
+				<label for="product_id" class="form-label">Product Id:</label>
 				<div class="col-sm-8">
 					<input
 					id="product_id"
@@ -88,8 +88,9 @@ const { product } = data;
 					class="form-control"
 					name="product_id"
 					value="{data?.id}"
+					disabled
 				>
-				</div> -->
+				</div> 
 			</div>
 				<div class="row mb-3">
 					<label for="category_id" class="form-label">Category:</label>
