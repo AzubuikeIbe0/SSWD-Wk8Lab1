@@ -40,6 +40,8 @@ export const actions = {
         product_price: Number(form_data.get('product_price'))
       }
 
+      console.log('update product: ', product);
+
       if (
         product.id > 0 &&
         product.category_id > 0 &&
@@ -56,8 +58,8 @@ export const actions = {
         // This will display the success section of the page to show the newly added product
         return { 
           success: true,
-          message: `Product with id updated: ${result.product.id}`,
-          product: result.product
+          message: `Product with id updated: ${result?.product.id}`,
+          product: result?.product
         };
 
         // This will cause the form to redisplay for corrections, along with an error message

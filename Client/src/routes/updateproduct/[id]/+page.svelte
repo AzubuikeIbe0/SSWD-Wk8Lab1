@@ -80,7 +80,7 @@ const { product } = data;
 			}}
 			>
 			 <div class="row mb-3">
-				<label for="product_id" class="form-label">Product Id:</label>
+				<!-- <label for="product_id" class="form-label">Product Id:</label>
 				<div class="col-sm-8">
 					<input
 					id="product_id"
@@ -89,12 +89,12 @@ const { product } = data;
 					name="product_id"
 					value="{data?.id}"
 				>
-				</div>
+				</div> -->
 			</div>
 				<div class="row mb-3">
 					<label for="category_id" class="form-label">Category:</label>
 					<div class="col-sm-8">
-						<select id="category_id" class="form-select" name="category_id">
+						<select id="category_id" class="form-select" name="category_id" value="{data.category_id}">
 							<option value="0">Choose a category</option>
                             <!-- Add each category as an option in the seclect -->
 							{#each $categories as cat}
@@ -155,7 +155,7 @@ const { product } = data;
 					</div>
 				</div>
 				<!-- productId is a hidden field value is not required but set = 0-->
-				<input id="id" type="hidden" value="0" />
+				<input name="id" type="hidden" value="{data.id}" />
 				<div class="mb-3">
 					<button type="submit" class="btn btn-primary">Update Product </button>
 					<a href="/" class="btn btn-secondary"> Cancel </a>

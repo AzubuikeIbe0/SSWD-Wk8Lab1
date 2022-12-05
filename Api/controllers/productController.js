@@ -95,7 +95,7 @@ router.post('/', async(req, res) => {
 
   // This endpoint updates a product
 // Note that this handles a PUT request (router.put)
-router.put('/:id', async(req, res) => {
+router.put('/', async(req, res) => {
 
   // read data request body, this will be the new product
   const update_product = req.body;
